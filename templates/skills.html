@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ashish Kadam | Skills</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand logo" href="#"><span>My</span>Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+      <ul class="navbar-nav nav-custom">
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('info') }}">Info</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="{{ url_for('skills') }}">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+</li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ================= TECHNICAL SKILLS ================= -->
+
+<section class="skills-section">
+
+<div class="container">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-bars">
+
+<div class="skill">
+<span>Python</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:60%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>Java</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:50%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>HTML5</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>CSS3</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>JavaScript</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:45%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>Bootstrap</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:40%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>SQL / MySQL</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:50%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>Firebase</span>
+<div class="skill-bar">
+<div class="skill-fill" style="width:40%"></div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TOOLS ================= -->
+
+<section class="info-section dark-bg">
+
+<div class="container">
+
+<h2 class="section-title">Tools & Technologies</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="info-card">
+<i class="fab fa-git-alt fa-3x"></i>
+<h5>Git</h5>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="info-card">
+<i class="fab fa-github fa-3x"></i>
+<h5>GitHub</h5>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="info-card">
+<i class="fas fa-database fa-3x"></i>
+<h5>MySQL</h5>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="info-card">
+<i class="fas fa-cloud fa-3x"></i>
+<h5>Firebase</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= CURRENTLY LEARNING ================= -->
+
+<section class="info-section dark-bg">
+
+<div class="container">
+
+<h2 class="section-title">Currently Learning</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>AWS Cloud</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>DevOps</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Backend Development</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================= CORE CONCEPTS ================= -->
+
+<section class="info-section">
+
+<div class="container">
+
+<h2 class="section-title">Core Concepts</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Object Oriented Programming</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Database Management Systems</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Software Development Life Cycle</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Computer Networks</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Data Structures (Basics)</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<h5>Cloud Fundamentals</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= HOBBIES ================= -->
+
+<section class="info-section">
+
+<div class="container">
+
+<h2 class="section-title">Hobbies & Interests</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/football.jpg') }}">
+<h5>Football</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/bball.jpg') }}">
+<h5>Basketball</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/sketching.jpg') }}">
+<h5>Sketching</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/read.jpg') }}">
+<h5>Reading Books</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/traveling.jpg') }}">
+<h5>Travelling</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/photography.jpg') }}">
+<h5>Photography</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+<h4>About</h4>
+<p>Passionate coder focused on building meaningful projects and continuously improving technical skills.</p>
+</div>
+
+<div class="col-md-4">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('info') }}">Info</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="{{ url_for('resume') }}">Resume</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+</li>
+
+</ul>
+</div>
+
+<div class="col-md-4">
+<h4>Contact</h4>
+<p>Email: kadamashish720@gmail.com</p>
+<p>Location: Chh. Sambhajinagar</p>
+<div class="social-icons">
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-github"></i>
+<i class="fab fa-instagram"></i>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

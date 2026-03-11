@@ -1,0 +1,904 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.custom-navbar{
+    background:black;
+    padding:14px 30px;
+    box-shadow: 0 6px 18px rgba(255,140,0,0.7); /* glowing bottom */
+    z-index: 9999;
+    position: relative;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ffb347 !important;
+}
+
+.logo:hover{
+    color:#ffb347 !important;
+}
+
+.logo span{
+    font-family:cursive;
+    color:white;
+}
+
+/* ================= NAVBAR LINK EFFECT ================= */
+
+.nav-custom .nav-link{
+    color:#f2c078 !important;
+    margin-left:30px;
+    font-size:17px;
+    position:relative;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* POP EFFECT */
+
+.nav-custom .nav-link:hover{
+    color:#ff9800 !important;
+    transform: scale(1.12);
+}
+
+/* UNDERLINE EFFECT */
+
+.nav-custom .nav-link::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#ff9800;
+    transition:0.3s;
+    transform:translateX(-50%);
+}
+
+.nav-custom .nav-link:hover::after{
+    width:100%;
+}
+/* ================= POP EFFECT ON NAME + LOGO ================= */
+
+/* ================= HOVER POP EFFECT ================= */
+
+.logo,
+.name{
+    display:inline-block;
+    transition: transform 0.25s ease;
+    cursor:pointer;
+}
+
+.logo:hover{
+    transform: scale(1.15);
+}
+
+.name:hover{
+    transform: scale(1.12);
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    padding:80px 0;
+    background:#0f0f0f;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* TEXT SIDE */
+
+.hero-text{
+    max-width:520px;
+}
+
+.intro{
+    font-size:22px;
+    color:#ccc;
+}
+
+.name{
+    font-size:100px;
+    font-weight:bold;
+    color:#ffb347;
+    line-height:1.1;
+}
+
+.description{
+    margin-top:12px;
+    font-size:18px;
+    color:#bdbdbd;
+}
+
+
+/* IMAGE SIDE */
+
+.hero-image{
+    position:absolute;
+    right:0;
+    top:100px;
+}
+
+.hero-image img{
+    width:550px;
+    max-width:100%;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education{
+    padding:80px 0;
+    background:#1b1b1b;
+}
+
+/* ================= EDUCATION TITLE ================= */
+
+.section-title{
+    position:relative;
+    text-align:center;
+    margin-bottom:70px;
+    font-size:40px;
+    font-weight:bold;
+    color:#ffb347;
+    display:inline-block;
+    left:50%;
+    transform:translateX(-50%);
+
+    border:2px solid #ff9800;
+    padding:8px 25px;
+    border-radius:6px;
+}
+
+/* line behind title */
+
+.section-title::before{
+    content:"";
+    position:absolute;
+    left:-150px;
+    top:50%;
+    width:120px;
+    height:3px;
+    background:#ff9800;
+}
+
+.section-title::after{
+    content:"";
+    position:absolute;
+    right:-150px;
+    top:50%;
+    width:120px;
+    height:3px;
+    background:#ff9800;
+}
+/* ================= EDUCATION CARD ================= */
+
+.edu-card{
+    background:#1f1f1f;
+    color:white;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    height:100%;
+    box-shadow:0 6px 18px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* POP HOVER EFFECT */
+
+.edu-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 10px 25px rgba(255,140,0,0.5);
+}
+.edu-card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:12px 0 15px 0;
+}
+/* EDUCATION CARD TEXT */
+
+.edu-card h4{
+    color:#ff9800;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.edu-card h5{
+    color:#f5c48c;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.edu-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.edu-card ul li{
+    font-size:15px;
+    color:#cfcfcf;
+    margin:3px 0;
+}
+.education .row{
+    align-items:stretch;
+}
+/* ================= PROJECT SECTION ================= */
+
+.projects{
+
+padding:100px 0;
+
+/* maroon gradient fading to black */
+
+background:
+radial-gradient(circle at center,
+#5a0f0f 0%,
+#3b0909 40%,
+#140202 70%,
+black 100%);
+
+}
+
+/* CAROUSEL */
+
+.project-carousel{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.carousel-wrapper{
+overflow:hidden;
+width:85%;
+margin:auto;
+}
+
+.carousel-track{
+display:flex;
+transition:transform 0.7s ease;
+}
+
+.project-slide{
+min-width:100%;
+display:flex;
+justify-content:center;
+}
+
+/* BIG PROJECT CARD */
+
+.project-big-card{
+
+width:80%;
+background:#d2bb72;
+border-radius:18px;
+padding:30px;
+text-align:center;
+
+box-shadow:0 10px 35px rgba(0,0,0,0.7);
+
+transition:0.3s;
+
+}
+
+.project-big-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* IMAGE */
+
+.project-big-card img{
+width:100%;
+height:auto;
+max-height:500px;
+object-fit:contain;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+/* TITLE */
+.project-title{
+color:#ff9800;
+font-size:32px;
+font-weight:bold;
+margin-bottom:10px;
+
+display:inline-block;
+border-bottom:2px solid #ff9800;
+padding-bottom:4px;
+letter-spacing:1px;
+}
+
+.project-subtitle{
+color:#5a3d1a;
+font-size:18px;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.project-big-card h3{
+
+color:#ff9800;
+font-size:28px;
+margin-bottom:12px;
+
+}
+
+/* DESCRIPTION */
+
+.project-big-card p{
+
+color:white;
+font-size:16px;
+line-height:1.6;
+
+}
+
+/* ARROWS */
+
+.carousel-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#ff9800;
+border:none;
+color:white;
+font-size:24px;
+width:55px;
+height:55px;
+border-radius:50%;
+cursor:pointer;
+z-index:100;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.left-btn{
+left:-1px;
+}
+
+.right-btn{
+right:-1px;
+}
+
+.carousel-btn:hover{
+background:#ffb347;
+}
+
+/* VIEW MORE BUTTON */
+
+.project-more-btn{
+
+text-align:center;
+margin-top:40px;
+
+}
+
+.project-more-btn a{
+
+padding:12px 32px;
+background:#ff9800;
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.project-more-btn a:hover{
+
+background:#ffb347;
+
+}
+/* BIG HOMEPAGE IMAGE */
+
+.project-main-img{
+width:100%;
+max-height:420px;
+object-fit:contain;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+/* SUB IMAGES ROW */
+
+.project-sub-images{
+display:flex;
+justify-content:center;
+gap:12px;
+margin-bottom:20px;
+}
+
+.project-sub-images img{
+width:48%;
+height:auto;
+object-fit:contain;
+border-radius:10px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:black;
+    padding:50px 0;
+    margin-top:80px;
+}
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin:8px 0;
+}
+
+.footer-links a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.social-icons i{
+    font-size:22px;
+    margin-right:12px;
+    cursor:pointer;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text{
+        max-width:90%;
+    }
+
+    .hero-image{
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-top:30px;
+        display:flex;
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:300px;
+    }
+
+    .name{
+        font-size:48px;
+    }
+
+    .nav-custom .nav-link{
+        margin-left:0;
+        margin-top:10px;
+    }
+
+    
+}
+
+.project-big-card{
+
+width:95%;
+
+}
+
+.project-main-img{
+width:100%;
+max-height:420px;
+object-fit:contain;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.project-sub-images{
+display:flex;
+gap:12px;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.project-sub-images img{
+width:48%;
+height:auto;
+object-fit:contain;
+border-radius:10px;
+}
+
+
+/* ================= INFO PAGE ================= */
+
+.info-section{
+padding:90px 0;
+background:#0f0f0f;
+}
+
+.dark-bg{
+background:#1b1b1b;
+}
+
+.info-card{
+background:#1f1f1f;
+padding:25px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+transition:0.3s;
+height:100%;
+}
+
+.info-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 10px 25px rgba(255,140,0,0.5);
+}
+
+.info-card img{
+width:100%;
+height:auto;
+max-height:220px;
+object-fit:contain;
+}
+
+.info-card h4,
+.info-card h5{
+color:#ff9800;
+margin-bottom:10px;
+}
+
+.info-card p{
+color:#cfcfcf;
+font-size:15px;
+line-height:1.6;
+}
+
+/* EDUCATION SECTION */
+
+.education-card{
+background:#fffaf0;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+height:100%;
+}
+
+.education-card h5{
+font-weight:700;
+margin-bottom:10px;
+color:#222;
+}
+
+.education-card p{
+color:#555;
+font-size:15px;
+line-height:1.6;
+}
+
+.education-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+    
+
+/* ================= RESUME PAGE ================= */
+
+.resume-section{
+padding:100px 0;
+background:#0f0f0f;
+}
+
+.resume-viewer{
+width:100%;
+height:900px;
+background:#1f1f1f;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,0.7);
+margin-bottom:40px;
+}
+
+.resume-viewer iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+.resume-download{
+text-align:center;
+}
+
+.resume-download a{
+background:#ff9800;
+color:white;
+padding:14px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+}
+
+.resume-download a:hover{
+background:#ffb347;
+}
+/* ================= BIG RESUME VIEW ================= */
+
+.resume-section{
+padding:100px 0;
+background:#0f0f0f;
+}
+
+/* MAIN RESUME CONTAINER */
+
+.resume-container{
+display:flex;
+justify-content:center;
+}
+
+/* BORDERED FRAME */
+
+.resume-frame{
+
+width:90%;
+height:85vh;   /* covers most of screen */
+
+background:#1f1f1f;
+
+border-radius:18px;
+
+border:3px solid #ff9800;
+
+box-shadow:
+0 0 15px rgba(255,152,0,0.4),
+0 0 35px rgba(255,152,0,0.2);
+
+overflow:hidden;
+
+transition:0.3s;
+
+}
+
+/* HOVER EFFECT */
+
+.resume-frame:hover{
+
+transform:scale(1.01);
+
+box-shadow:
+0 0 25px rgba(255,152,0,0.6),
+0 0 50px rgba(255,152,0,0.4);
+
+}
+
+/* PDF VIEW */
+
+.resume-frame iframe{
+
+width:100%;
+height:100%;
+border:none;
+
+}
+
+/* DOWNLOAD BUTTON */
+
+.resume-download{
+
+margin-top:35px;
+text-align:center;
+
+}
+
+.resume-download a{
+
+background:#ff9800;
+color:white;
+padding:14px 35px;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+
+}
+
+.resume-download a:hover{
+
+background:#ffb347;
+
+}
+
+.resume-highlights{
+padding:80px 0;
+background:#1b1b1b;
+}
+
+.highlight-card{
+background:#202020;
+padding:35px;
+border-radius:12px;
+text-align:center;
+border:1px solid #333;
+transition:0.3s;
+height:100%;
+}
+
+.highlight-card h5{
+color:#ff8c00;
+font-size:20px;
+margin-bottom:12px;
+}
+
+.highlight-card p{
+color:#d6d6d6;
+font-size:14px;
+line-height:1.6;
+}
+
+.highlight-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(255,140,0,0.4);
+}
+
+
+
+
+.resume-links{
+text-align:center;
+padding:70px 0;
+background:#151515;
+}
+
+.links-container a{
+display:inline-block;
+margin:10px;
+padding:12px 28px;
+border-radius:30px;
+background:#ff8c00;
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.links-container a:hover{
+background:#ff6a00;
+transform:scale(1.05);
+}
+/* ================= SKILLS PAGE ================= */
+
+.skills-section{
+padding:100px 0;
+background:#0f0f0f;
+}
+
+.skills-bars{
+max-width:800px;
+margin:auto;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill span{
+display:block;
+margin-bottom:6px;
+font-weight:600;
+}
+
+.skill-bar{
+width:100%;
+background:#2a2a2a;
+height:12px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:100%;
+background:#ff9800;
+border-radius:20px;
+transition:width 1s ease;
+}
+
+
+
+/* ================= CONTACT PAGE ================= */
+
+.contact-section{
+padding-top:140px;
+padding-bottom:100px;
+background:#0f0f0f;
+}
+
+.contact-info{
+background:#1f1f1f;
+padding:35px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+height:100%;
+}
+
+.contact-info h4{
+color:#ff9800;
+margin-bottom:15px;
+}
+
+.contact-info p{
+color:#cfcfcf;
+margin-bottom:25px;
+}
+
+.contact-detail{
+display:flex;
+align-items:center;
+margin-bottom:15px;
+color:#ddd;
+}
+
+.contact-detail i{
+color:#ff9800;
+margin-right:12px;
+font-size:18px;
+}
+
+.contact-form{
+background:#1f1f1f;
+padding:35px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.6);
+}
+
+.form-control{
+background:#2a2a2a;
+border:none;
+color:white;
+}
+
+.form-control:focus{
+background:#2a2a2a;
+color:white;
+box-shadow:0 0 8px rgba(255,152,0,0.6);
+}
+
+.contact-btn{
+padding:12px 30px;
+font-weight:bold;
+border-radius:30px;
+}

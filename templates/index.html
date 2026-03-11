@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Kadam | Portfolio</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#"><span>My</span>Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+      <ul class="navbar-nav nav-custom">
+        <li class="nav-item">
+<a class="nav-link active" href="{{ url_for('home') }}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('info') }}">Info</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <div class="container hero-container">
+
+    <!-- TEXT SIDE -->
+    <div class="hero-text">
+      <p class="intro">Hi..My Name is</p>
+      <h1 class="name">Ashish Kadam</h1>
+      <p class="description">
+        A combination of a creative mind and engineering skills.<br>
+        Currently pursuing B.Tech in Information Technology at MGM University.
+      </p>
+    </div>
+
+    <!-- IMAGE SIDE -->
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/pd.png') }}" alt="Ashish Kadam">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="education">
+  <h2 class="section-title">Education</h2>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="edu-card">
+          <h4>SSC</h4>
+          <img src="{{ url_for('static', filename='images/holycross.jpg') }}">
+          <h5>Holy Cross English High School</h5>
+          <ul>
+            <li>Completed : 2020</li>
+            <li>Percentage : 80%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="edu-card">
+          <h4>HSC</h4>
+          <img src="{{ url_for('static', filename='images/milind.jpg') }}">
+          <h5>Milind College of Science</h5>
+          <ul>
+            <li>Completed : 2022</li>
+            <li>Stream : Science</li>
+            <li>Percentage : 72%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="edu-card">
+          <h4>Bachelor's Degree</h4>
+          <img src="{{ url_for('static', filename='images/mgm.jpg') }}">
+          <h5>MGM University</h5>
+          <ul>
+            <li>B.Tech IT</li>
+            <li>Completed : Expected(June 2026)</li>
+            <li>Current CGPA: 7.89</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section class="projects">
+
+<div class="container">
+
+<h2 class="section-title">My Projects</h2>
+
+<div class="project-carousel">
+
+<button class="carousel-btn left-btn">
+<i class="fas fa-chevron-left"></i>
+</button>
+
+<div class="carousel-wrapper">
+
+<div class="carousel-track">
+
+<!-- ===== SLIDE 1 ===== -->
+
+<div class="project-slide">
+<div class="project-big-card">
+
+<h3 class="project-title">Bite Delight</h3>
+<h4 class="project-subtitle">Recipe Sharing Platform</h4>
+
+<img class="project-main-img"
+src="{{ url_for('static', filename='images/project/Screenshot (62).png') }}">
+
+<div class="project-sub-images">
+<img src="{{ url_for('static', filename='images/project/Screenshot (64).png') }}">
+<img src="{{ url_for('static', filename='images/project/Screenshot (66).png') }}">
+</div>
+
+<p>
+Bite Delight is a modern recipe sharing platform developed using
+Flask, Python, HTML, CSS and Bootstrap.
+</p>
+
+<a href="https://github.com/ashishkadam761/bite-delight-recipe-website"
+class="btn btn-warning mt-3" target="_blank">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+</div>
+</div>
+
+
+<!-- ===== SLIDE 2 ===== -->
+
+<div class="project-slide">
+<div class="project-big-card">
+
+<h3 class="project-title">Goblet</h3>
+<h4 class="project-subtitle">E-Commerce Platform</h4>
+
+<img class="project-main-img"
+src="{{ url_for('static', filename='images/project/gb1.png') }}">
+
+<div class="project-sub-images">
+<img src="{{ url_for('static', filename='images/project/gb2.png') }}">
+<img src="{{ url_for('static', filename='images/project/gb3.png') }}">
+</div>
+
+<p>
+Goblet is a responsive e-commerce website designed to simulate
+an online shopping experience.
+</p>
+
+<a href="#" class="btn btn-warning mt-3">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+</div>
+</div>
+
+
+<!-- ===== SLIDE 3 ===== -->
+
+<div class="project-slide">
+<div class="project-big-card">
+
+<h3 class="project-title">Travel Companion Finder</h3>
+<h4 class="project-subtitle">Travel Networking Platform</h4>
+
+<img class="project-main-img"
+src="{{ url_for('static', filename='images/project/rp1.png') }}">
+
+<div class="project-sub-images">
+<img src="{{ url_for('static', filename='images/project/rp2.png') }}">
+<img src="{{ url_for('static', filename='images/project/rp3.png') }}">
+</div>
+
+<p>
+Travel Companion Finder connects travelers with companions
+based on interests and destinations.
+</p>
+
+<a href="#" class="btn btn-warning mt-3">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<button class="carousel-btn right-btn">
+<i class="fas fa-chevron-right"></i>
+</button>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= HOBBIES ================= -->
+
+<section class="info-section">
+
+<div class="container">
+
+<h2 class="section-title">Hobbies & Interests</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/football.jpg') }}">
+<h5>Football</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/bball.jpg') }}">
+<h5>Basketball</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/sketching.jpg') }}">
+<h5>Sketching</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/read.jpg') }}">
+<h5>Reading Books</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/traveling.jpg') }}">
+<h5>Travelling</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+<img src="{{ url_for('static', filename='images/hobskills/photography.jpg') }}">
+<h5>Photography</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>About</h4>
+        <p>Passionate coder focused on building meaningful projects and continuously improving technical skills.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li class="nav-item">
+<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('info') }}">Info</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="{{ url_for('resume') }}">Resume</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+</li>
+
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Contact</h4>
+        <p>Email: kadamashish720@gmail.com</p>
+        <p>Location: Chh. Sambhajinagar</p>
+        <div class="social-icons">
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
