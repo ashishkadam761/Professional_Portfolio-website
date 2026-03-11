@@ -24,7 +24,7 @@ The goal of this project was to design and develop a simple but professional por
 
 ## Project Structure
 
-
+```text
 portfolio-website/
 │
 ├── app.py
@@ -32,10 +32,9 @@ portfolio-website/
 ├── Procfile
 ├── templates/
 ├── static/
-│ ├── css
-│ ├── js
-│ └── images
-
+│   ├── css/
+│   ├── js/
+│   └── images/
 
 ## Running Locally
 
