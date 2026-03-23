@@ -30,11 +30,7 @@ The goal of this project was to design and develop a simple but professional por
 
 ## Project Structure
 
-<<<<<<< HEAD
-```text
-=======
 ```
->>>>>>> be6d780 (added gunicorn for deployment)
 portfolio-website/
 │
 ├── app.py
@@ -52,18 +48,13 @@ portfolio-website/
 │
 ├── static/
 │   ├── css/
-<<<<<<< HEAD
-│   ├── js/
-│   └── images/
-=======
 │   │   └── style.css
 │   ├── js/
 │   │   └── script.js
 │   └── images/
 ```
 
----
->>>>>>> be6d780 (added gunicorn for deployment)
+
 
 ## Running Locally
 
